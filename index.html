@@ -3,240 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malik Atlukhanov - Software Developer</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Portfolio | Creative Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Unbounded:wght@800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #141936;
+            --bg-card: #1a1f3a;
+            --accent-primary: #00ff88;
+            --accent-secondary: #00d4ff;
+            --text-primary: #e8edf4;
+            --text-secondary: #8b95b3;
+            --gradient: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Arxa fon animasiyası */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        header {
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Hero Bölməsi */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Unbounded', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .highlight {
+            color: var(--accent-primary);
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            border: none;
+            border-radius: 5px;
+            color: var(--bg-primary);
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <div class="bg-animation"></div>
-    
+
     <header>
         <div class="container">
             <nav>
-                <div class="logo">MA</div>
+                <div class="logo">PORTFOLIO</div>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Ana Səhifə</a></li>
+                    <li><a href="#projects">Layihələr</a></li>
+                    <li><a href="#contact">Əlaqə</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero" id="about">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>
-                            Hello, I'm<br>
-                            <span class="gradient-text">Malik Atlukhanov</span>
-                        </h1>
-                        <p class="subtitle">Software Developer</p>
-                        <p>
-                            I am a growth-oriented frontend developer with strong skills in building modern and responsive web applications. I have received training in both frontend and backend development at Code Academy, which has helped me develop a full-stack mindset. With an analytical approach, strong problem-solving abilities, and a passion for continuous learning, I constantly expand my knowledge by working on real-world projects. My goal is to contribute as a valuable professional within innovative technology teams.
-
-                        </p>
-                        <div class="cta-buttons">
-                            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                            <a href="#experience" class="btn btn-secondary">View Experience</a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <!-- <img src="/mnt/user-data/uploads/WhatsApp_Image_2026-02-10_at_21_04_00.jpeg" alt="Malik Atlukhanov"> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="gradient-text">Technical Skills</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <h3>HTML & CSS</h3>
-                        <p>Advanced</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>JavaScript</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>C#</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>React</h3>
-                        <p>Basic</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>Node.js</h3>
-                        <p>Basic</p>
-                    </div>
-                    
-                    <div class="skill-card fade-in">
-                        <h3>MongoDB</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>SQL</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>Git & GitHub</h3>
-                        <p>Advanced</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>REST API</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>Python</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>C/C++</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <h3>Linux</h3>
-                        <p>Intermediate</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="gradient-text">Experience & Education</span></h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Software Development Intern</h3>
-                        <p class="date">Code Academy | September 2025 – February 2026</p>
-                        <ul>
-                            <li>Built real-world applications as part of a development team</li>
-                            <li>Practiced Git/GitHub version control</li>
-                            <li>Contributed to social media and fitness app projects</li>
-                            <li>Worked with REST APIs to fetch and display dynamic data using fetch and axios</li>
-                            <li>Applied responsive design principles to ensure compatibility across mobile, tablet, and desktop devices</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Holberton School</h3>
-                        <p class="date">2025 – 2026</p>
-                        <ul>
-                            <li>Software Engineering program</li>
-                            <li>Full-stack development training</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Code Academy</h3>
-                        <p class="date">2025 – 2026</p>
-                        <ul>
-                            <li>Software Developer certification</li>
-                            <li>Frontend and Backend development</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Baku State University</h3>
-                        <p class="date">2023 – 2027</p>
-                        <ul>
-                            <li>Computer Science - SABAH program</li>
-                            <li>Bachelor's degree</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="gradient-text">Languages</span></h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Azerbaijani</h3>
-                        <p>Native</p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Turkish</h3>
-                        <p>Fluent</p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>English</h3>
-                        <p>Intermediate</p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Russian</h3>
-                        <p>Basic</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="gradient-text">Contact</span></h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Email</h3>
-                        <a href="mailto:atluxanovmalik3@gmail.com" style="font-size: 0.85rem; word-break: break-all;">atluxanovmalik3@gmail.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Phone</h3>
-                        <a href="tel:+994553049836">+994 55 304 98 36</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Location</h3>
-                        <p>Sumqayit, Azerbaijan</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <section class="hero" id="home">
         <div class="container">
-            <p>Created by <span class="gradient-text">Malik Atlukhanov</span></p>
+            <h1>Salam, Mən <span class="highlight">Developerəm</span></h1>
+            <p>Modern texnologiyalarla yaradıcı və sürətli veb saytlar hazırlayıram.</p>
+            <a href="mailto:email@nizami.com" class="btn">Mənimlə Əlaqə</a>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Scroll animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in, .timeline-item, .contact-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s, transform 0.6s';
-            observer.observe(el);
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
-
